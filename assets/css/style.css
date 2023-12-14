@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap');
+
+*{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding: var(--scroll-padding, 6rem);
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(160, 196, 157);
+}
+.nav-bar{
+  background-color: rgb(255,252,240);
+  padding: auto;
+  margin-inline: auto;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 1px solid rgb(147, 146, 140);
+}
+.logo img{
+  width: 100px;
+}
+.nav-list ul {
+  padding-inline: 2rem;
+  display: flex;
+  gap: 3rem;
+}
+.nav-list li{
+  list-style-type: none;
+}
+.nav-list li a{
+  color: rgb(160, 196, 157);
+  font-size: 700;
+  text-decoration: none;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  transition: 0.3s;
+  position: relative;
+}
+/* .nav-list li:hover a{
+  color: rgb(255,252,240);
+  background-color: rgb(160, 196, 157);
+} */
+.nav-list li a:hover{
+  color: rgb(147, 146, 140);
+}
+.nav-list li a::before{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 10%;
+  background-color: rgb(147, 146, 140);
+  transition: 0.3s;
+}
+.nav-list a:hover::before{
+  background-color: rgb(160, 196, 157);
+  width: 100%;
+}
+.hamburger-menu{
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  right: 4%;
+}
+.hamburger-menu p{
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+  margin: 0px 10px 5px 0px;
+}
+.hamburger-menu .top,
+.hamburger-menu .mid,
+.hamburger-menu .bot{
+  background-color: rgb(160, 196, 157);
+  width: 40px;
+  height: 5px;
+}
+.hamburger-menu:hover .top,
+.hamburger-menu:hover .mid,
+.hamburger-menu:hover .bot{
+  background-color: rgb(147, 146, 140);
+}
+/* MAIN CONTENT */
+main{
+  width: 100%;
+  margin-inline: auto;
+  padding: 1rem 2rem;
+}
+.main-content{
+  color: rgb(255,252,240); 
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  justify-content: space-around;
+}
+.content-description{
+  flex: 1 1;
+}
+.content-description h1{
+  font-size: 3rem;
+}
+.content-description p{
+  font-size: 1.4rem;
+}
+.content-description button {
+  padding: .8rem 2.5rem;
+  border: 1.5px solid rgb(255,252,240);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: rgb(255,252,240);
+  background-color: rgb(160, 196, 157);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.content-description button:hover {
+  color: rgb(160, 196, 157);
+  background-color: rgb(255,252,240);
+}
+.content-image{
+  display: flex;
+  flex: 1;
+  position: relative;
+  background-color: rgb(160, 196, 157);
+}
+.content-image img{
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 300px 270px 90px 180px;
+  background-color: rgb(255,252,240);
+  box-shadow: 1px 1px 20px rgb(43, 43, 43);
+}
+.content-image .info{
+  position: absolute;
+  z-index: 10;
+  padding: 10px;
+  color: rgb(255,252,240);
+  background-color: rgb(147, 146, 140);
+}
+
+/* second content */
+.second-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 50px 50px 50px;
+  background-color: rgb(179, 201, 156);
+  box-shadow: 0 0 0 100vmax rgb(179, 201, 156);
+  clip-path: inset(0 -100vmax);
+}
+.second-content h2{
+  color: rgb(255,252,240);
+  text-align: center;
+  font-size: 4rem;
+}
+.container{
+  display: flex;
+}
+.img-container{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+.img-container img{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.img-logo-code{
+  background-color: rgb(179, 201, 156);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* third content */
+.third-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+  margin: auto;
+  color: rgb(255,252,240);
+  
+}
+.contact-description{
+  flex: 1 1;
+}
+.contact-description h1{
+  font-size: 4rem;
+  margin: 0;
+}
+.contact-description p{
+  font-size: 2rem;
+  margin: 0px 0px 0px 10px;
+}
+.contact-description span{
+  font-size: 1.5rem;
+}
+.contact-description button{
+  padding: .8rem 2.5rem;
+  border: 1.5px solid rgb(255,252,240);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: rgb(255,252,240);
+  background-color: rgb(160, 196, 157);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.contact-description button:hover {
+  color: rgb(160, 196, 157);
+  background-color: rgb(255,252,240);
+}
+.contact-image{
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+.contact-image p{
+  padding: 10px;
+}
+.contact-image img{
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 100px 20px 30px 40px;
+  background-color: rgb(255,252,240);
+  box-shadow: 1px 1px 20px rgb(43, 43, 43);
+  transform: scaleX(-1);
+}
+.contact-image .info{
+  position: absolute;
+  color: rgb(255,252,240);
+  background-color: rgb(147, 146, 140);
+}
+
+/* aside */
+aside{
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+.social-media{
+  display: flex;
+  height: 100%;
+}
+.social-media ul {
+  padding: 1rem 0.8rem;
+  margin: auto;
+  border-radius: 30px 0px 0px 30px;
+  background-color: rgb(147, 146, 140);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.social-media li {
+list-style-type: none;
+}
+.social-media li img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.social-media li p{
+  margin: 0;
+  color: rgb(43, 43, 43);
+}
+.social-media .name2{
+  display: none;
+}
+/* footer */
+footer {
+  padding: 20px;
+  color: rgb(160, 196, 157);
+  background-color: rgb(255,252,240);
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 1120px){
+  .social-media ul{
+    padding: 0.8rem 0.6rem;
+  }
+  .social-media li img{
+    width: 80px;
+    height: 80px;
+  }
+  .social-media li .name1{
+    display: none;
+  }
+  .social-media li .name2{
+    display: block;
+  }
+}
+
+@media (max-width: 984px){
+  .main-content{
+    flex-direction: column-reverse;
+  }
+  .contact-description h1{
+    font-size: 2rem;
+  }
+  .content-description p{
+    font-size: 1rem;
+  }
+  .img-container{
+    flex-direction: column;
+  }
+  .third-content{
+    flex-direction: column;
+  }
+  .social-media{
+    transition: all 0.5s ease-in-out;
+  }
+}
+@media (max-width: 540px) {
+  .nav-list{
+    display: none;
+  }
+  .hamburger-menu{
+    display: block;
+  }
+  .contact-description button{
+    padding: .6rem 1.2rem;
+  }
+  .social-media{
+    transition: all 0.5s ease-in-out;
+  }
+}
+@media (max-width: 505px) {
+  .social-media{
+    margin: 0px -85px 0px 0px;
+    transition: all 0.5s ease-in-out;
+  }
+}
